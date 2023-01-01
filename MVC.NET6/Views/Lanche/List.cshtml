@@ -4,7 +4,18 @@
     ViewData["Title"] = "List";
 }
 
-<h1>List</h1>
+<div><h2>Todos os lanches</h2></div>
+
+@foreach (var lanche in Model)
+{
+    <div>
+        <h4>Lanche: @lanche.Nome</h4>
+        <p><img src="@lanche.ImagemUrl" /></p>
+        <p>Preço: @lanche.Preco.ToString("c")</p>
+    </div>
+}
+
+@*<h1>List</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -81,3 +92,4 @@
 }
     </tbody>
 </table>
+*@
